@@ -11,15 +11,15 @@ There are multiple issues to be found with this repository, you are tasked with 
 
 To build the container:
 
-`docker build -t local/nginx-problem .`
+`docker build --tag local/nginx-problem .`
 
 To run the container in the foreground:
 
-`docker run -p 80:80 -p 443:443 -it local/nginx-problem`
+`docker run -p 80:80 -p 443:443 --interactive --tty local/nginx-problem`
 
 To run the container in the background:
 
-`docker run -d -p 80:80 -p 443:443 -it local/nginx-problem`
+`docker run --detach -p 80:80 -p 443:443 --interactive --tty local/nginx-problem`
 
 To spawn a shell in a running container:
 
